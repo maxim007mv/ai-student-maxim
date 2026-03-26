@@ -1,10 +1,17 @@
 {
-    "experiment_id": "C3",
-    "dataset": "STL10",
-    "architecture": "ResNet18",
-    "val_accuracy": 93.2,
-    "test_accuracy": 54.475,
-    "seed": 42,
-    "optimizer": "Adam",
-    "lr": 0.001
+  "experiment_id": "C3",
+  "dataset": "STL10",
+  "architecture": "ResNet18",
+  "mode": "resnet18-head-only",
+  "seed": 42,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "epochs": 2,
+  "best_val_accuracy": 93.7,
+  "test_accuracy": 93.45,
+  "transforms": {
+    "basic": "Resize(96,96)+Normalize(0.5,0.5,0.5)",
+    "aug": "Resize+Flip+Rotation+ColorJitter+Normalize",
+    "resnet": "Resize(224,224)+ImageNetNormalize"
+  }
 }
