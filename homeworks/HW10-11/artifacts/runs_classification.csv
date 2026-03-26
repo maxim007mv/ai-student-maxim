@@ -1,5 +1,5 @@
-config,desc,val_acc
-C1,Simple CNN Base,47.6
-C2,Simple CNN Aug,46.1
-C3,ResNet18 Head,93.2
-C4,ResNet18 FineTune,91.0
+experiment_id,desc,best_val_accuracy
+C1,simple-cnn-base,47.7
+C2,simple-cnn-aug,48.0
+C3,resnet18-head-only,93.7
+C4,resnet18-finetune,91.3
