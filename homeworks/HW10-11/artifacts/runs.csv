@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,SimpleCNN (2 conv + 2 fc),Adam,0.001,2,47.6,,,,,simple-cnn-base без аугментаций
+C2,classification,STL10,42,SimpleCNN (2 conv + 2 fc),Adam,0.001,2,46.1,,,,,simple-cnn-aug с аугментациями
+C3,classification,STL10,42,ResNet18 (head-only),Adam,0.001,2,93.2,54.475,,,,resnet18-head-only лучшая модель
+C4,classification,STL10,42,ResNet18 (layer4+fc finetune),Adam,0.001,2,91.0,,,,,resnet18-finetune частичное дообучение
+V1,segmentation,OxfordIIITPet,42,DeepLabV3_ResNet50,,,,,,,0.0099,базовая постобработка argmax
+V2,segmentation,OxfordIIITPet,42,DeepLabV3_ResNet50,,,,,,,0.0043,альтернативная постобработка

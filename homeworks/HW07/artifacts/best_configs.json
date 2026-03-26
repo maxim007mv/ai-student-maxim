@@ -1,0 +1,31 @@
+{
+    "S07-hw-dataset-01.csv": {
+        "KMeans": {
+            "k": 2
+        },
+        "Agglomerative": {
+            "k": 2,
+            "linkage": "ward"
+        },
+        "best": "KMeans"
+    },
+    "S07-hw-dataset-02.csv": {
+        "KMeans": {
+            "k": 2
+        },
+        "DBSCAN": {
+            "eps": 0.3
+        },
+        "best": "KMeans"
+    },
+    "S07-hw-dataset-04.csv": {
+        "KMeans": {
+            "k": 5
+        },
+        "Agglomerative": {
+            "k": 3,
+            "linkage": "ward"
+        },
+        "best": "KMeans"
+    }
+}

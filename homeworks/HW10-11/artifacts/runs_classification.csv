@@ -1,0 +1,5 @@
+config,desc,val_acc
+C1,Simple CNN Base,47.6
+C2,Simple CNN Aug,46.1
+C3,ResNet18 Head,93.2
+C4,ResNet18 FineTune,91.0

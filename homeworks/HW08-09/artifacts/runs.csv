@@ -1,0 +1,8 @@
+experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss,test_accuracy,test_loss
+E1,KMNIST,42,"hidden=[256, 128, 64]; activation=relu; dropout=0.0; batchnorm=False",adam,0.001,0.0,0.0,12,0.951916666507721,0.19614558601379395,,
+E2,KMNIST,42,"hidden=[256, 128, 64]; activation=relu; dropout=0.3; batchnorm=False",adam,0.001,0.0,0.0,12,0.951333333492279,0.17048615304629008,,
+E3,KMNIST,42,"hidden=[256, 128, 64]; activation=relu; dropout=0.0; batchnorm=True",adam,0.001,0.0,0.0,12,0.9589166665077209,0.16281813943386078,,
+E4,KMNIST,42,"hidden=[256, 128, 64]; activation=relu; dropout=0.0; batchnorm=True",adam,0.001,0.0,0.0,20,0.9636666665077209,0.153813886175553,0.9113,0.4456068064689636
+O1,KMNIST,42,"hidden=[256, 128, 64]; activation=relu; dropout=0.0; batchnorm=True",adam,0.1,0.0,0.0,6,0.9422499998410543,0.21659638017416,,
+O2,KMNIST,42,"hidden=[256, 128, 64]; activation=relu; dropout=0.0; batchnorm=True",adam,1e-05,0.0,0.0,6,0.8482500001589457,0.8691525039672852,,
+O3,KMNIST,42,"hidden=[256, 128, 64]; activation=relu; dropout=0.0; batchnorm=True",sgd,0.03,0.9,0.0001,12,0.9641666666666666,0.14107790450255075,,

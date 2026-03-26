@@ -1,0 +1,3 @@
+config,desc,miou
+V1,DeeplabV3 Base,0.009895134166193507
+V2,DeeplabV3 Alternative,0.004253396855589624

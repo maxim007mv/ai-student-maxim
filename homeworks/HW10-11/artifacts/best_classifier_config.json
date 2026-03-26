@@ -1,0 +1,10 @@
+{
+    "experiment_id": "C3",
+    "dataset": "STL10",
+    "architecture": "ResNet18",
+    "val_accuracy": 93.2,
+    "test_accuracy": 54.475,
+    "seed": 42,
+    "optimizer": "Adam",
+    "lr": 0.001
+}
