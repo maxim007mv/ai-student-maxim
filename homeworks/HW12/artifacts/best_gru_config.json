@@ -1,0 +1,9 @@
+{
+  "model": "GRUForecaster",
+  "window_size": 24,
+  "horizon": 1,
+  "hidden_size": 64,
+  "lr": 0.001,
+  "epochs_trained": 30,
+  "seed": 42
+}
