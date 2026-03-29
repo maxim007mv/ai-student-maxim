@@ -5,5 +5,34 @@
   "hidden_size": 64,
   "lr": 0.001,
   "epochs_trained": 30,
-  "seed": 42
+  "seed": 42,
+  "normalization": {
+    "target_scaler": {
+      "type": "StandardScaler",
+      "fit_on": "train_only",
+      "transform_on": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "inverse_transform_for_metrics": true
+    },
+    "feature_scaler": {
+      "type": "StandardScaler",
+      "fit_on": "train_only",
+      "transform_on": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "applies_to": [
+        "lag_1",
+        "lag_7",
+        "lag_14",
+        "rolling_mean_7",
+        "rolling_std_7",
+        "day_of_week"
+      ]
+    }
+  }
 }

@@ -66,9 +66,10 @@
 - Лучшая модель части A: [./artifacts/best_classifier.pt](./artifacts/best_classifier.pt)
 - Конфиг лучшей модели части A: [./artifacts/best_classifier_config.json](./artifacts/best_classifier_config.json)
 - Кривые лучшего прогона классификации: [./artifacts/figures/classification_curves_best.png](./artifacts/figures/classification_curves_best.png)
-- Сравнение C1-C4: [./artifacts/figures/classification_comparison.png](./artifacts/figures/classification_comparison.png)
+- Сравнение C1-C4: [./artifacts/figures/classification_compare.png](./artifacts/figures/classification_compare.png)
 - Визуализация аугментаций: [./artifacts/figures/augmentations_preview.png](./artifacts/figures/augmentations_preview.png)
-- Визуализации второй части: [./artifacts/figures/segmentation_V1.png](./artifacts/figures/segmentation_V1.png)
+- Примеры сегментации (V1 vs V2): [./artifacts/figures/segmentation_examples.png](./artifacts/figures/segmentation_examples.png)
+- Метрики сегментации (V1 vs V2): [./artifacts/figures/segmentation_metrics.png](./artifacts/figures/segmentation_metrics.png)
 
 Короткая сводка (6-10 строк):
 
@@ -84,7 +85,7 @@
 
 ## 7. Анализ
 
-Простая CNN (C1) на STL10 показала результат около 47%, что является неплохим базовым уровнем для изображения 96x96 при коротком обучении. Аугментации в C2 не дали мгновенного прироста, что характерно для коротких сессий — модели нужно больше итераций, чтобы "увидеть" инвариантность. Предобученная ResNet18 (C3/C4) кардинально улучшила результат, так как веса, обученные на ImageNet, содержат мощные детекторы признаков, которые отлично переносятся на STL10. Разница между head-only (C3) и fine-tuning (C4) оказалась минимальной, но C3 был менее подвержен переобучению. В части сегментации Mean IoU оказался крайне низким (0.01), так как DeepLabV3 предобучена на 21 класс VOC, которые не соответствуют 1-к-1 маскам OxfordPet. Тем не менее, визуальный анализ `segmentation_V1.png` подтверждает, что "силуэт" животного модель выделяет корректно, просто присваивает ему неверный индекс класса.
+Простая CNN (C1) на STL10 показала результат около 47%, что является неплохим базовым уровнем для изображения 96x96 при коротком обучении. Аугментации в C2 не дали мгновенного прироста, что характерно для коротких сессий — модели нужно больше итераций, чтобы "увидеть" инвариантность. Предобученная ResNet18 (C3/C4) кардинально улучшила результат, так как веса, обученные на ImageNet, содержат мощные детекторы признаков, которые отлично переносятся на STL10. Разница между head-only (C3) и fine-tuning (C4) оказалась минимальной, но C3 был менее подвержен переобучению. В части сегментации Mean IoU оказался крайне низким (0.01), так как DeepLabV3 предобучена на 21 класс VOC, которые не соответствуют 1-к-1 маскам OxfordPet. Тем не менее, визуальный анализ примеров в `segmentation_examples.png` подтверждает, что "силуэт" животного модель выделяет корректно, просто присваивает ему неверный индекс класса.
 
 ## 8. Итоговый вывод
 
@@ -94,6 +95,8 @@
 
 ## 9. Приложение (опционально)
 
-- Графики сравнения всех моделей (C1-C4) в одном окне: [classification_comparison.png](./artifacts/figures/classification_comparison.png)
+- Графики сравнения всех моделей (C1-C4) в одном окне: [classification_compare.png](./artifacts/figures/classification_compare.png)
 - Пример работы аугментаций: [augmentations_preview.png](./artifacts/figures/augmentations_preview.png)
+- Примеры сегментации для V1/V2: [segmentation_examples.png](./artifacts/figures/segmentation_examples.png)
+- Сравнение метрик сегментации для V1/V2: [segmentation_metrics.png](./artifacts/figures/segmentation_metrics.png)
 
