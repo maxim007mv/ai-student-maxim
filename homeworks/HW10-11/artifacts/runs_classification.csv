@@ -1,0 +1,5 @@
+experiment_id,desc,best_val_accuracy
+C1,simple-cnn-base,47.7
+C2,simple-cnn-aug,48.0
+C3,resnet18-head-only,93.7
+C4,resnet18-finetune,91.3

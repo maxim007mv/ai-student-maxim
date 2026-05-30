@@ -1,0 +1,12 @@
+{
+  "model_name": "Stacking",
+  "best_model_label": "Stacking",
+  "test_metrics": {
+    "accuracy": 0.98032,
+    "f1": 0.7602339181286549,
+    "roc_auc": 0.9078652190379726,
+    "model": "Stacking"
+  },
+  "search_summary": null,
+  "random_state": 42
+}

@@ -1,0 +1,27 @@
+services:
+  api:
+    build: .
+    volumes:
+      - ./outputs:/app/outputs
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - MODEL_PATH=outputs/best_model.pth
+
+  ui:
+    build: .
+    command: ["streamlit", "run", "app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
+    volumes:
+      - ./outputs:/app/outputs
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api

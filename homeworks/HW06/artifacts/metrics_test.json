@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "project": "HW06",
+    "dataset": "S06-hw-dataset-04.csv",
+    "random_state": 42,
+    "metrics_count": 6
+  },
+  "results": [
+    {
+      "accuracy": 0.98032,
+      "f1": 0.7602339181286549,
+      "roc_auc": 0.9078652190379726,
+      "model": "Stacking"
+    },
+    {
+      "accuracy": 0.97744,
+      "f1": 0.7068607068607069,
+      "roc_auc": 0.9066166584726455,
+      "model": "Boosting"
+    },
+    {
+      "accuracy": 0.972,
+      "f1": 0.6031746031746031,
+      "roc_auc": 0.9004174292039302,
+      "model": "RandomForest"
+    },
+    {
+      "accuracy": 0.96256,
+      "f1": 0.4090909090909091,
+      "roc_auc": 0.8400411948253248,
+      "model": "LogisticRegression"
+    },
+    {
+      "accuracy": 0.96752,
+      "f1": 0.5653104925053534,
+      "roc_auc": 0.8021938601294271,
+      "model": "DecisionTree"
+    },
+    {
+      "accuracy": 0.95088,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "model": "Dummy"
+    }
+  ]
+}
